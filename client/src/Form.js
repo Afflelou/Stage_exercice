@@ -17,9 +17,9 @@ export default class Form extends React.Component {
     });
   };
 
-  onValid = e => {
+  onSubmit = e => {
     e.preventDefault();
-    this.props.onValid(this.state);
+    this.props.onSubmit(this.state);
     // clear form
     this.setState({
       name: "",
@@ -78,7 +78,7 @@ export default class Form extends React.Component {
           floatingLabelFixed
         />
         <br />
-        <RaisedButton label="ADD" onClick={e => this.onValid(e)} primary />
+        <RaisedButton label="ADD" onClick={e => this.onSubmit(e)} primary />
       </form>
     );
   }
